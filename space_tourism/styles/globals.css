@@ -11,6 +11,7 @@
 html,
 body {
   height: 100%;
+  font-size: 16px;
   font-family: "Bellefair", sans-serif;
 }
 
