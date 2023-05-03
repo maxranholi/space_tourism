@@ -5,11 +5,15 @@ export const Header = styled.div`
   display: flex;
   height: 6rem;
   justify-content: end;
-  margin-top: -4em;  
+  margin-top: -4em;
 
-  @media (max-width: 768px) {
-    justify-content: end;
+  @media (max-width: 900px) {
     margin-top: 0;
+  }
+
+  @media (max-width: 700px) {
+    align-items: center;
+    justify-content: end;
   }
 `;
 
@@ -18,72 +22,65 @@ export const HeaderLine = styled.div`
   font-size: 1rem;
   height: 3rem;
   border-bottom: 1px #ffffff40 solid;
-  width: 33vw;
+  width: 35vw;
   z-index: 1;
   position: absolute;
   left: 10vw;
   color: transparent;
 
-  @media (max-width: 1126px) {
+  @media (max-width: 900px) {
     display: none;
   }
 `;
 
 export const HeaderOptions = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 60vw;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(13.5px);
-  -webkit-backdrop-filter: blur(13.5px);
-  border-radius: 4px 0 0 4px;
-  flex-wrap: wrap;
+  @media (max-width: 900px) {
+    width: auto;
+    justify-content: center;
+    padding-right: 1em;
+  }
 
-  @media (max-width: 768px) {
-    width: 0;
+  @media (max-width: 700px) {
+    padding-right: 0;
+    justify-content: flex-start;
   }
 `;
 
 export const MenuUl = styled.ul`
+  padding: 0 10% 0 3em;
+  height: 6em;
+  border-radius: 4px 0 0 4px;
   display: flex;
-  position: relative;
-  font-family: "roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.8em;
-  line-height: 19px;
-  letter-spacing: 2.7px;
+  align-items: center;
   list-style: none;
-  gap: 3em;
+  gap: 4rem;
   margin-left: 2em;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
+    gap: 2rem;
+  }
+
+  @media (max-width: 700px) {
     display: block;
+    flex-direction: column;
+    justify-content: space-evenly;
     position: absolute;
-    width: 100%;
+    width: 60%;
     top: 70px;
     right: 0px;
-    background: #e65219;
-    transition: 0.6s;
-    z-index: 1000;
-    height: 0px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
     visibility: hidden;
     overflow-y: hidden;
   }
 `;
 
 export const MenuLi = styled.li`
-  a {
-    text-decoration: none;
-    color: #ffffff99;
-    position: relative;
-
-    :hover {
-      color: #ffffff;
-    }
-  }
+  font-family: "roboto", "sans-serif";
   display: block;
   padding: 0.5rem;
   font-size: 1.2rem;
@@ -96,9 +93,6 @@ export const MenuLi = styled.li`
   transition-duration: 500ms;
   transition-property: color;
 
-  @media (max-width: 768px) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  }
   &:focus:after {
     width: 100%;
     left: 0%;
@@ -110,7 +104,7 @@ export const MenuLi = styled.li`
   &:after {
     content: "";
     pointer-events: none;
-    bottom: -1.6em;
+    bottom: -25px;
     left: 50%;
     position: absolute;
     width: 0%;
@@ -120,11 +114,32 @@ export const MenuLi = styled.li`
     transition-duration: 500ms;
     transition-property: width, left;
   }
+  @media (max-width: 900px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 700px) {
+    margin-top: 2em;
+    line-height: 0.5em;
+    color: #ffffff;
+    font-size: 2rem;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffffff99;
+    position: relative;
+
+    :hover {
+      color: #ffffff;
+    }
+  }
 `;
 
 export const BtnMobile = styled.button`
   display: none;
-  @media (max-width: 768px) {
+  @media (max-width: 700px) {
     display: flex;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -136,16 +151,16 @@ export const BtnMobile = styled.button`
 `;
 
 export const Hamburger = styled.span`
-  @media (max-width: 768px) {
-    border-top: 2px solid;
-    width: 20px;
+  @media (max-width: 700px) {
+    border-top: 4px solid;
+    width: 30px;
     color: #ffff;
     &::after,
     ::before {
       content: "";
       display: block;
-      width: 20px;
-      height: 2px;
+      width: 30px;
+      height: 4px;
       margin-top: 5px;
       transition: 0.3s;
       position: relative;
@@ -155,7 +170,7 @@ export const Hamburger = styled.span`
 `;
 
 export const Nav = styled.nav`
-  @media (max-width: 768px) {
+  @media (max-width: 700px) {
     &.active #hamburger {
       border-top-color: transparent;
     }
@@ -166,7 +181,7 @@ export const Nav = styled.nav`
     &.active #hamburger::after {
       transform: rotate(-135deg);
       background-color: #ffff;
-      top: -7px;
+      top: -9px;
     }
     &.active #menu {
       height: calc(100vh - 70px);

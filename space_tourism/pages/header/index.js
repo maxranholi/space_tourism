@@ -31,28 +31,18 @@ export function Header() {
         </H.BtnMobile>
         <H.HeaderOptions>
           <H.MenuUl id="menu" role="menu">
-            <li>
-              <H.MenuLi onClick={() => setToggleMenu("disabled")}>
-                <Link list-style="none" href="/">
-                  Home
-                </Link>
-              </H.MenuLi>
-            </li>
-            <li>
-              <H.MenuLi onClick={() => setToggleMenu("disabled")}>
-                <Link href="/destination">Destination</Link>
-              </H.MenuLi>
-            </li>
-            <li>
-              <H.MenuLi onClick={() => setToggleMenu("disabled")}>
-                <Link href="/crew">Crew</Link>
-              </H.MenuLi>
-            </li>
-            <li>
-              <H.MenuLi onClick={() => setToggleMenu("disabled")}>
-                <Link href="/techonology">Techonology</Link>
-              </H.MenuLi>
-            </li>
+            <H.MenuLi onClick={() => setToggleMenu("disabled")}>
+              <Link list-style="none" href="/">Home</Link>
+            </H.MenuLi>
+            <H.MenuLi onClick={() => setToggleMenu("disabled")}>
+              <Link href="/destination">Destination</Link>
+            </H.MenuLi>
+            <H.MenuLi onClick={() => setToggleMenu("disabled")}>
+              <Link href="/crew">Crew</Link>
+            </H.MenuLi>
+            <H.MenuLi onClick={() => setToggleMenu("disabled")}>
+              <Link href="/techonology">Techonology</Link>
+            </H.MenuLi>
           </H.MenuUl>
         </H.HeaderOptions>
       </H.Nav>
