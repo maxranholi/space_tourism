@@ -9,8 +9,7 @@ export default function Home() {
         <title>Space Tourism</title>
       </Head>
       <D.Container>
-        <Header />
-        <D.TitleAndButoon>
+        <D.TitleAndButton>
           <D.TitleContainer>
             <D.SecondTitle>So, you want to travel to </D.SecondTitle>
             <D.MainTitle>SPACE</D.MainTitle>
@@ -21,8 +20,8 @@ export default function Home() {
               this world experience.
             </D.Paragraphy>
           </D.TitleContainer>
-          <D.Button>EXPLORE</D.Button>
-        </D.TitleAndButoon>
+          <D.Button>Explore</D.Button>
+        </D.TitleAndButton>
       </D.Container>
     </>
   );

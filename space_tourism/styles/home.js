@@ -2,96 +2,115 @@ import styled from "styled-components";
 import desktopImage from "../assets/background-home-desktop.jpg";
 import tabletImage from "../assets/background-home-tablet.jpg";
 import mobileImage from "../assets/background-home-mobile.jpg";
+import logo from "../assets/home_icon.svg";
+
+// export const Logo = styled.div`
+// background-image: url(${logo?.src});
+// height: 50px;
+// width: 50px;
+// background-repeat: no-repeat;
+// `
 
 export const Container = styled.main`
-  background-image: url(${desktopImage?.src});
+  background-image: url(${mobileImage?.src});
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: end;
+  padding: 4em 0;
 
-  @media (max-width: 900px) {
+  @media (min-width: 700px) {
     background-image: url(${tabletImage?.src});
-    justify-content: space-between;
   }
 
-  @media (max-width: 700px) {
-    background-image: url(${mobileImage?.src});
-  }
-`;
-
-export const TitleAndButoon = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  gap: 10vw;
-  align-items: end;
-  padding: 0 2em;
-
-  @media (max-width: 900px) {
-    flex-direction: column;
-    align-items: center;
-    gap: 4em;
-    padding-bottom: 6em;
-  }
-
-  @media (max-width: 900px) {
-    padding-bottom: 4em;
+  @media (min-width: 1000px) {
+    background-image: url(${desktopImage?.src});
   }
 `;
-export const TitleContainer = styled.section`
+
+export const TitleAndButton = styled.div`
+  width: 84%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 70vh;
+  margin-top: 12em;
 
-  @media (max-width: 900px) {
-    text-align: center;
+  @media (min-width: 1000px) {
+    flex-direction: row;
+    margin-top: 8em;
   }
 `;
+
+export const TitleContainer = styled.div`
+`;
+
 export const MainTitle = styled.h1`
-  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-  font-family: "Bellefair", "sans-serif";
+  font-family: "Bellefair";
   font-style: normal;
   font-weight: 400;
-  font-size: 8rem;
-  line-height: 10rem;
+  font-size: 5rem;
+  line-height: 6.25rem;
+  text-align: center;
   color: #ffffff;
+  padding: 1.5rem;
 
-  @media (max-width: 700px) {
-    font-size: 6rem;
+  @media (min-width: 700px) {
+    font-size: 9.375rem;
+    line-height: 9.375rem;
+  }
+
+  @media (min-width: 1000px) {
+    line-height: 10.75rem;
+    padding: 0.5rem 0;
+    text-align: start;
   }
 `;
-
 export const SecondTitle = styled.h2`
-  font-family: "roboto", "sans-serif";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 1.45;
-  line-height: 34px;
-  letter-spacing: 4.725px;
-  color: #d0d6f9;
-
-  @media (max-width: 900px) {
-    font-size: 1.25rem;
-  }
-
-  @media (max-width: 700px) {
-    font-size: 0.8rem;
-  }
-`;
-export const Paragraphy = styled.p`
-  font-family: "roboto", "sans-serif";
+  font-family: "Barlow Condensed";
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 32px;
+  line-height: 1.188rem;
+  text-align: center;
+  letter-spacing: 2.7px;
   color: #d0d6f9;
-  max-width: 26em;
 
-  @media (max-width: 700px) {
-    font-size: 0.8rem;
+  @media (min-width: 700px) {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 1.80rem;
+    line-height: 2.125rem;
+    text-align: start;
+  }
+
+`;
+
+export const Paragraphy = styled.p`
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--text-small);
+  line-height: 1.563rem;
+  text-align: center;
+  color: #d0d6f9;
+  max-width: 300px;  
+
+  @media (min-width: 700px) {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    max-width: 470px;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    max-width: 430px;
+    text-align: start;
   }
 `;
 
@@ -99,17 +118,17 @@ export const Button = styled.button`
   font-family: "Bellefair";
   font-style: normal;
   font-weight: 400;
-  font-size: 32px;
-  line-height: 37px;
-  letter-spacing: 2px;
+  font-size: 4.5rem;
+  line-height: 1.438rem;
+  letter-spacing: 0.078rem;
   color: #0b0d17;
-  width: 16rem;
-  height: 16rem;
-  border-radius: 50%;
   border: none;
   outline: none;
   cursor: pointer;
   transition: 0.8s;
+  height: 4em;
+  width: 4em;
+  border-radius: 100%;
 
   :hover {
     outline: 60px #ffffff40 solid;
@@ -121,9 +140,13 @@ export const Button = styled.button`
     transition: 0.8s;
   }
 
-  @media (max-width: 700px) {
-    width: 12rem;
-    height: 12rem;
-    font-size: 26px;
+  @media (min-width: 700px) {
+    font-size: 5rem;
+    line-height: 1.8rem;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 4rem;
+    line-height: 1.8rem;
   }
 `;
