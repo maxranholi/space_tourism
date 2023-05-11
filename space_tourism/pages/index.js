@@ -1,6 +1,7 @@
 import Head from "next/head";
 import * as D from "../styles/home";
-import { Header } from "./header";
+import { Nav } from "./header";
+
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <title>Space Tourism</title>
       </Head>
       <D.Container>
+      <Nav></Nav>
         <D.TitleAndButton>
           <D.TitleContainer>
             <D.SecondTitle>So, you want to travel to </D.SecondTitle>

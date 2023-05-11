@@ -34,17 +34,16 @@ export const TitleAndButton = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 70vh;
-  margin-top: 12em;
+  margin-top: 8em;
+  gap: 5em;
 
   @media (min-width: 1000px) {
     flex-direction: row;
-    margin-top: 8em;
+    margin-top: 12em;
   }
 `;
 
-export const TitleContainer = styled.div`
-`;
+export const TitleContainer = styled.div``;
 
 export const MainTitle = styled.h1`
   font-family: "Bellefair";
@@ -83,22 +82,21 @@ export const SecondTitle = styled.h2`
   }
 
   @media (min-width: 1000px) {
-    font-size: 1.80rem;
+    font-size: 1.8rem;
     line-height: 2.125rem;
     text-align: start;
   }
-
 `;
 
 export const Paragraphy = styled.p`
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: var(--text-small);
+  font-size: 1rem;
   line-height: 1.563rem;
   text-align: center;
   color: #d0d6f9;
-  max-width: 300px;  
+  max-width: 300px;
 
   @media (min-width: 700px) {
     font-size: 1rem;
@@ -118,7 +116,7 @@ export const Button = styled.button`
   font-family: "Bellefair";
   font-style: normal;
   font-weight: 400;
-  font-size: 4.5rem;
+  font-size: 1.5rem;
   line-height: 1.438rem;
   letter-spacing: 0.078rem;
   color: #0b0d17;
@@ -126,8 +124,8 @@ export const Button = styled.button`
   outline: none;
   cursor: pointer;
   transition: 0.8s;
-  height: 4em;
-  width: 4em;
+  height: 8em;
+  width: 8em;
   border-radius: 100%;
 
   :hover {
@@ -141,12 +139,12 @@ export const Button = styled.button`
   }
 
   @media (min-width: 700px) {
-    font-size: 5rem;
+    font-size: 1.8rem;
     line-height: 1.8rem;
   }
 
   @media (min-width: 1000px) {
-    font-size: 4rem;
+    font-size: 2.5rem;
     line-height: 1.8rem;
   }
 `;
