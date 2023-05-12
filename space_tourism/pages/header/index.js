@@ -11,8 +11,9 @@ export function Nav() {
   }
 
   return (
-    <S.Wrapper>
+    <>
       <S.Icon />
+      <S.Line />
       <S.Container>
         <S.Button>
           <S.ButtonHamburguer onClick={toggleNav} aria-label="open navigation">
@@ -36,6 +37,6 @@ export function Nav() {
           </S.List>
         </S.Navbar>
       </S.Container>
-    </S.Wrapper>
+    </>
   );
 }

@@ -40,6 +40,7 @@ export const TitleAndButton = styled.div`
   @media (min-width: 1000px) {
     flex-direction: row;
     margin-top: 12em;
+    width: 80%;
   }
 `;
 

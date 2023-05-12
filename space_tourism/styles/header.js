@@ -1,8 +1,21 @@
 import styled from "styled-components"
 import HomeIcon from "../assets/home_icon.svg"
 
-export const Wrapper = styled.div`
+export const Line = styled.div`
+display: none;
 
+@media (min-width: 1000px) {
+display: block;
+height: 1.5px;
+position: absolute;
+width: 34%;
+margin-left: 8em;
+margin-top: 2em;
+z-index: 1;
+background: #FFFFFF80;
+mix-blend-mode: normal;
+opacity: 0.25;
+}
 `
 
 export const Container = styled.header`
@@ -12,6 +25,10 @@ top: 0;
 right: 0;
 
 @media (min-width: 700px) {
+    top: 0;
+  }
+
+  @media (min-width: 1000px) {
     top: 3em;
   }
 `
@@ -22,8 +39,16 @@ height: 60px;
 width: 60px;
 position: absolute;
 left: 42px;
-top: 60px;
+top: 70px;
 background-repeat: no-repeat;
+
+@media (min-width: 700px) {
+    top: 30px;
+  }
+
+  @media (min-width: 1000px) {
+    top: 70px;
+  }
 `
 
 export const Navbar = styled.nav`
@@ -81,7 +106,16 @@ span {
 
 @media (min-width: 700px) {
 display: flex;
+padding-top: 2em;
+justify-content: space-around;
+padding-left: 0;
+font-size: .8rem;
+line-height: 1.125rem;
+}
+
+@media (min-width: 1000px) {
 gap: 3em;
-padding-top: 1em
+padding-top:1.8em;
+margin-left: 3em;
 }
 `
